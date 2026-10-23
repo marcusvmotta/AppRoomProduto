@@ -85,7 +85,9 @@ val total = products.sumOf { it.price }
 texto += "\nQuantidade de produtos: ${products.size}"
 texto += "\nSoma dos preços: R$ $total"
 ```
+
 Print: ![A4](docs/prints/a4.png)
+
 
 ### A5. Buscar por nome
 O que foi feito: criei a função `buscarPorNome` no DAO, um campo de busca e o botão Buscar. Uso `%texto%` para achar nomes parecidos.
@@ -105,7 +107,9 @@ binding.btnBuscar.setOnClickListener {
     }
 }
 ```
+
 Print: ![A5](docs/prints/a5.png)
+
 
 ### A6. Excluir produtos
 O que foi feito: criei a função `deleteAll` no DAO e o botão Excluir Todos.
@@ -124,7 +128,9 @@ binding.btnExcluirTodos.setOnClickListener {
     }
 }
 ```
+
 Print: ![A6](docs/prints/a6.png)
+
 
 ### A7. Atualizar produto
 O que foi feito: o usuário digita o id e o novo preço. O app busca o produto pelo id, troca o preço com `copy()` e salva com a função `@Update`.
@@ -146,7 +152,9 @@ if (produto == null) {
     productDao.update(produto.copy(price = novoPreco))
 }
 ```
+
 Print: ![A7](docs/prints/a7.png)
+
 
 ### A8. Novo campo na tabela
 O que foi feito: adicionei `quantity: Int` na entidade `Product`, um campo Quantidade no layout e mudei a `version` do banco de 1 para 2.
@@ -160,7 +168,9 @@ Trecho de código:
 
 **O que aconteceu com os produtos já cadastrados:** eles foram apagados. Como a estrutura da tabela mudou (ganhou uma coluna nova) e a versão subiu, o Room precisaria de uma migração para saber como transformar a tabela antiga na nova. Como não criei nenhuma migração e o projeto usa `fallbackToDestructiveMigration()`, o Room simplesmente apagou o banco antigo e criou um novo do zero, com a coluna `quantity`. Por isso a lista ficou vazia e foi preciso cadastrar os produtos de novo.
 
+
 Print: ![A8](docs/prints/a8.png)
+
 
 ## Parte B: Questões dissertativas
 
@@ -187,8 +197,3 @@ Resposta: Criar o banco com o Room é uma operação pesada, que gasta memória 
 
 ### B8. Reflexão pessoal: dificuldades e um app real onde o Room seria útil
 Resposta: A principal dificuldade que tive foi configurar o Gradle, porque precisei adicionar o plugin `kapt`, ativar o ViewBinding e colocar as dependências do Room, e qualquer coisa errada fazia o projeto não compilar. Resolvi conferindo o passo a passo e clicando em Sync Now e Rebuild Project. Também tive que entender por que os produtos sumiram quando adicionei o campo `quantity`, e descobri que foi por causa do `fallbackToDestructiveMigration()`. Um app real onde o Room seria útil é um app de controle de estoque de uma pequena loja ou mercadinho. Eu usaria uma entidade `Produto` com nome, preço e quantidade, igual a deste projeto, para o dono cadastrar os produtos e ver o total do estoque mesmo sem internet.
-
-## Como executar
-1. Clone o repositório
-2. Abra no Android Studio
-3. Execute em um emulador (API 24+)
