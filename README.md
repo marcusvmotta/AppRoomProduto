@@ -86,7 +86,7 @@ texto += "\nQuantidade de produtos: ${products.size}"
 texto += "\nSoma dos preços: R$ $total"
 ```
 
-Print: ![A4](docs/prints/a4.png)
+Print: ![A4](docs/prints/a4.PNG)
 
 
 ### A5. Buscar por nome
@@ -108,7 +108,7 @@ binding.btnBuscar.setOnClickListener {
 }
 ```
 
-Print: ![A5](docs/prints/a5.png)
+Print: ![A5](docs/prints/a5.PNG)
 
 
 ### A6. Excluir produtos
@@ -129,7 +129,7 @@ binding.btnExcluirTodos.setOnClickListener {
 }
 ```
 
-Print: ![A6](docs/prints/a6.png)
+Print: ![A6](docs/prints/a6.PNG)
 
 
 ### A7. Atualizar produto
@@ -153,7 +153,7 @@ if (produto == null) {
 }
 ```
 
-Print: ![A7](docs/prints/a7.png)
+Print: ![A7](docs/prints/a7.PNG)
 
 
 ### A8. Novo campo na tabela
@@ -169,7 +169,7 @@ Trecho de código:
 **O que aconteceu com os produtos já cadastrados:** eles foram apagados. Como a estrutura da tabela mudou (ganhou uma coluna nova) e a versão subiu, o Room precisaria de uma migração para saber como transformar a tabela antiga na nova. Como não criei nenhuma migração e o projeto usa `fallbackToDestructiveMigration()`, o Room simplesmente apagou o banco antigo e criou um novo do zero, com a coluna `quantity`. Por isso a lista ficou vazia e foi preciso cadastrar os produtos de novo.
 
 
-Print: ![A8](docs/prints/a8.png)
+Print: ![A8](docs/prints/a8.PNG)
 
 
 ## Parte B: Questões dissertativas
