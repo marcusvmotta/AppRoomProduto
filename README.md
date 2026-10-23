@@ -1,10 +1,9 @@
 # AppRoomProduto: Cadastro de Produtos com Room SQLite
 
-**Aluno(a):** Marcus Vinicius   
-**RA:** 243439
 
-**Aluno(a):** Nicholas Correa Fernandes
-**RA:** 241132
+**Alunos:**
+- Marcus Vinicius Motta RA 243439
+- Nicholas Correa Fernandes RA 241132
 
 **Disciplina:** Programação para Dispositivos Móveis
 **Professor(a):** Alessandro Ferreira Paz de Lima
@@ -20,8 +19,9 @@ usando persistência local com Room (SQLite).
 - Corrotinas (lifecycleScope)
 
 ## Prints do app
-![Tela inicial](docs/prints/tela-inicial.png)
-![Logcat com a listagem](docs/prints/logcat.png)
+![Tela inicial](docs/prints/tela-inicial.PNG)
+
+![Logcat com a listagem](docs/prints/logcat.PNG)
 
 ## Parte A: Complemento prático
 
