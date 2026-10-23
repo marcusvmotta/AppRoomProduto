@@ -2,8 +2,10 @@
 
 **Aluno(a):** Marcus Vinicius   
 **RA:** 243439
+
 **Aluno(a):** Nicholas Correa Fernandes
 **RA:** 241132
+
 **Disciplina:** Programação para Dispositivos Móveis
 **Professor(a):** Alessandro Ferreira Paz de Lima
 
