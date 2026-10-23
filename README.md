@@ -36,7 +36,7 @@ binding.editProductDescription.text.clear()
 binding.editProductQuantity.text.clear()
 binding.editProductName.requestFocus()
 ```
-Print: ![A1](docs/prints/a1.png)
+Print: ![A1](docs/prints/a1.PNG)
 
 ### A2. Validação de preço
 O que foi feito: o preço é convertido com `toDoubleOrNull()`. Se ficar vazio (null), zero ou negativo, aparece um erro no próprio campo e o produto não é salvo.
@@ -50,7 +50,8 @@ if (price == null || price <= 0) {
     return@setOnClickListener
 }
 ```
-Print: ![A2](docs/prints/a2.png)
+
+Print: ![A2](docs/prints/a2.PNG)
 
 ### A3. Lista na tela
 O que foi feito: coloquei um `TextView` (`txtLista`) abaixo dos botões. Ao clicar em Listar Produtos, a lista aparece nele (e continua aparecendo no Logcat também).
@@ -72,7 +73,8 @@ binding.btnListarProdutos.setOnClickListener {
     android:paddingTop="16dp"
     android:textSize="16sp" />
 ```
-Print: ![A3](docs/prints/a3.png)
+
+Print: ![A3](docs/prints/a3.PNG)
 
 ### A4. Total do estoque
 O que foi feito: no final da lista aparece a quantidade de produtos e a soma dos preços.
